@@ -9,6 +9,8 @@ function NavBar({openProjects}) {
     const location = useLocation(); 
 
     const [openNav, setOpenNav] = useState(true);
+
+    
     
     useEffect(() => {
         setOpenNav(openProjects)

@@ -1,13 +1,12 @@
 import {Icon} from "@iconify/react";
 import { motion } from "motion/react"
 import EnterAnimation from "../components/animate/EnterAnimation";
+import Projects from "../components/projects";
 import { div } from "motion/react-client";
 
 function Home({openProjects, setOpenProjects}) {
 
-    const active = true
 
-   
     return (
 
       
@@ -19,8 +18,10 @@ function Home({openProjects, setOpenProjects}) {
                 duration: .2,
                 ease: "easeOut"
             }}>
-            {active ? (
-                <div className="py-[65px] pl-[65px] h-[100vh]">
+            {openProjects ? (
+                <Projects />
+            ) : (   
+                 <div className="py-[65px] pl-[65px] h-[100vh]">
                 <div className="text-[100px] w-[1396px] font-semibold leading-[1.2]">
                     <EnterAnimation className="inline-block" tag="span" duration={.1}>
                           Designing
@@ -61,7 +62,7 @@ function Home({openProjects, setOpenProjects}) {
 
                 <div className="absolute bottom-[65px]">
                      <EnterAnimation tag="div" duration={1.1}>
-                        <motion.button onClick={() => setOpenProjects(!openProjects)} className="text-[40px]  text-blue-950 font-bold mt-[auto] flex items-center gap-4"
+                        <motion.button onClick={() => setOpenProjects(true)} className="text-[40px]  text-blue-950 font-bold mt-[auto] flex items-center gap-4"
                         whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                             View my work
                             <Icon className="text-5xl mt-[3px]"  icon="line-md:arrow-right-circle" />
@@ -69,11 +70,6 @@ function Home({openProjects, setOpenProjects}) {
                     </EnterAnimation> 
                 </div>           
             </div>
-            ) : (
-               <div className="h-[100vh]">
-
-                        Hello Paps
-                </div>
             )}    
          </motion.div>
 
