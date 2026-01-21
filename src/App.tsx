@@ -16,9 +16,10 @@ function App() {
 
 
   return (
-    
-      <div className="flex">
+
+      <div className="flex items-start">
         <Navbar openProjects={openProjects} />
+        <div className=" min-h-[100vh] w-[100%]">
           <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home openProjects={openProjects} setOpenProjects={setOpenProjects}  />}/>
@@ -26,6 +27,7 @@ function App() {
               <Route path="/contact" element={<Contact />}/>
             </Routes>
          </AnimatePresence>
+        </div>
       </div>
   )
 }

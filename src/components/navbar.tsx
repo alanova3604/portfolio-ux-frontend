@@ -29,7 +29,7 @@ function NavBar({openProjects}) {
 
     return (
 
-        <div className={`transition-all duration-400 justify-between flex flex-col h-[100vh] py-[62px] pl-[69px] navbar ${openNav  ? " active" : " w-[300px]  "}`}>
+        <div className={`transition-all top-0 duration-400 justify-between sticky flex flex-col h-[100vh] py-[62px] pl-[69px] navbar ${openNav  ? " active" : " w-[300px]  "}`}>
             <button className='menu' onClick={toggleNav}>
                 <Icon className="text-black text-5xl mt-[3px]"  icon="ic:round-menu" />
             </button>

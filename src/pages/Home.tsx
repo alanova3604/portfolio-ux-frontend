@@ -21,8 +21,8 @@ function Home({openProjects, setOpenProjects}) {
             {openProjects ? (
                 <Projects />
             ) : (   
-                 <div className="py-[65px] pl-[65px] h-[100vh]">
-                <div className="text-[100px] w-[1396px] font-semibold leading-[1.2]">
+                 <div className="py-[65px] pl-[65px] h-[100%]">
+                <div className="lg:text-[100px]  font-semibold leading-[1.2] sm:text-[40px]">
                     <EnterAnimation className="inline-block" tag="span" duration={.1}>
                           Designing
                     </EnterAnimation>

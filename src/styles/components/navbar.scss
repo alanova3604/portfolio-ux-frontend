@@ -1,39 +1,39 @@
 .navbar{
+  .menu{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+  }
+
+  nav, .name{
+    transition: all 0.3s ease;
+    transform-origin: left;
+    white-space: nowrap;
+  }
+
+
+  &.active{
+    width: 150px;
+
     .menu{
-        width: 0;
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
+      visibility: visible;
+      width: fit-content;
+      height: fit-content;
+      opacity: 1;
     }
 
     nav, .name{
-        transition: all 0.3s ease;
-        transform-origin: left;
-        white-space: nowrap;
+      transform: scaleX(0);
+      opacity: 0;
+      visibility: 0;
+      width: 0;
     }
-
-
-    &.active{
-        width: 150px;
-
-        .menu{
-            visibility: visible;
-            width: fit-content;
-            height: fit-content;
-            opacity: 1;
-        }
-        
-        nav, .name{
-            transform: scaleX(0);
-            opacity: 0;
-            visibility: 0;
-            width: 0;
-        }
-        .icon{
-            position: absolute;
-            left: 22px;
-            bottom: -8px;
-        }
+    .icon{
+      position: absolute;
+      left: 22px;
+      bottom: -8px;
     }
+  }
 }
