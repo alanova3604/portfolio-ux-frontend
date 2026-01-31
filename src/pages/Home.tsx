@@ -1,10 +1,9 @@
 import {Icon} from "@iconify/react";
 import { motion } from "motion/react"
 import EnterAnimation from "../components/animate/EnterAnimation";
-import Projects from "../components/projects";
-import { div } from "motion/react-client";
+import Projects from "../components/Projects";
 
-function Home({openProjects, setOpenProjects}) {
+function Home({openProjects, setOpenProjects}: any) {
 
 
     return (
@@ -51,6 +50,7 @@ function Home({openProjects, setOpenProjects}) {
                          vision.
                     </EnterAnimation>   
                 </div>
+                     <div className="text-[14px] my-5 text-[#555555]">Stack: Vue.js 3 • Tailwind CSS • Figma • Laravel • React • Adobe</div>
                 <div className="text-[20px] max-w-[1120px] mt-2 leading-[1.8]">
                      <EnterAnimation tag="div" duration={.8}>
                          I’m Alan Alcalá, a UX Designer and Front-End Developer focused on creating digital products that are functional,
