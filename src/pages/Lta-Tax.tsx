@@ -5,7 +5,7 @@ function AboutMe() {
 
 
 
-    const imagesGlob = import.meta.glob('/src/assets/lta/*.{png,jpg,jpeg}', { eager: true });
+    const imagesGlob = import.meta.glob('/src/assets/lta/*.{png,jpg,jpeg,webp}', { eager: true });
     const images = Object.values(imagesGlob).map((img: any) => img.default);
 
     return (

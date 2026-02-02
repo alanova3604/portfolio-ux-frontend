@@ -10,13 +10,6 @@
   &.active{
     width: 150px;
 
-    .menu{
-      visibility: visible;
-      width: fit-content;
-      height: fit-content;
-      opacity: 1;
-    }
-
     nav, .name{
       transform: scaleX(0);
       opacity: 0;

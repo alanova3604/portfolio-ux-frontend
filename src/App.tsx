@@ -3,6 +3,7 @@ import AboutMe from "./pages/AboutMe.tsx";
 import Home from "./pages/Home.tsx";
 import Contact from "./pages/Contact.tsx";
 import LtaTax from "./pages/Lta-Tax.tsx";
+import ClaroDeLuna from "./pages/ClaroDeLuna.tsx";
 import "./styles/themes/tailwind.css"
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -28,6 +29,7 @@ function App() {
                   <Route path="/about-me" element={<AboutMe  />}/>
                   <Route path="/contact" element={<Contact />}/>
                   <Route path="/lta-tax" element={<LtaTax />}/>
+                      <Route path="/claro-de-luna" element={<ClaroDeLuna />}/>
             </Routes>
          </AnimatePresence>
         </div>
