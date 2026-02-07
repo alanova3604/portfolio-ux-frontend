@@ -48,6 +48,7 @@ function Home({openProjects, setOpenProjects}: any) {
                             <EnterAnimation tag="span" duration={.5}>
                                 a
                             </EnterAnimation>
+                            {' '}
                             <EnterAnimation tag="span" duration={.6}>
                                 Front-end
                             </EnterAnimation>

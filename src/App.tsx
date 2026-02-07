@@ -1,4 +1,4 @@
-import Navbar from "./components/navbar.tsx";
+import NavbarNew from "./components/navBarNew.tsx";
 import AboutMe from "./pages/AboutMe.tsx";
 import Home from "./pages/Home.tsx";
 import Contact from "./pages/Contact.tsx";
@@ -20,9 +20,9 @@ function App() {
 
   return (
 
-      <div className="flex items-start">
-        <Navbar openProjects={openProjects} />
-        <div className=" min-h-[100vh] w-[100%]">
+      <div className="lg:flex">
+        <NavbarNew></NavbarNew>
+        <div className=" min-h-[100vh] flex-1">
           <AnimatePresence mode="wait">
                   <Routes location={location} key={location.pathname}>
                   <Route path="/" element={<Home openProjects={openProjects} setOpenProjects={setOpenProjects}  />}/>

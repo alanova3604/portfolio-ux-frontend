@@ -60,7 +60,7 @@ function ClaroDeLuna() {
                             Building Trust & Visual Elegance
                         </div>
                         <div className="text-white text-3xl md:text-4xl font-semibold font-['Instrument_Sans'] leading-tight md:leading-[72px]">
-                            2026
+                            2025
                         </div>
                     </div>
                 </div>
