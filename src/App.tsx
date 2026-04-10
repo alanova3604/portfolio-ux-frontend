@@ -1,40 +1,45 @@
-import NavbarNew from "./components/navBarNew.tsx";
-import AboutMe from "./pages/AboutMe.tsx";
-import Home from "./pages/Home.tsx";
-import Contact from "./pages/Contact.tsx";
-import LtaTax from "./pages/Lta-Tax.tsx";
-import ClaroDeLuna from "./pages/ClaroDeLuna.tsx";
-import "./styles/themes/tailwind.css"
-import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-
-
+import { useEffect } from "react";
 
 function App() {
-
-  const [openProjects, setOpenProjects] = useState(false);
-
-  const location = useLocation();
-
+  useEffect(() => {
+    // Redirection happens immediately on mount
+    window.location.href = "https://alanvaldez.xyz/";
+  }, []);
 
   return (
-
-      <div className="lg:flex">
-        <NavbarNew></NavbarNew>
-        <div className=" min-h-[100vh] flex-1">
-          <AnimatePresence mode="wait">
-                  <Routes location={location} key={location.pathname}>
-                  <Route path="/" element={<Home openProjects={openProjects} setOpenProjects={setOpenProjects}  />}/>
-                  <Route path="/about-me" element={<AboutMe  />}/>
-                  <Route path="/contact" element={<Contact />}/>
-                  <Route path="/lta-tax" element={<LtaTax />}/>
-                      <Route path="/claro-de-luna" element={<ClaroDeLuna />}/>
-            </Routes>
-         </AnimatePresence>
-        </div>
-      </div>
-  )
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+      backgroundColor: '#000000',
+      color: '#ffffff',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      textAlign: 'center',
+      padding: '20px'
+    }}>
+      <div style={{
+        width: '40px',
+        height: '40px',
+        border: '3px solid rgba(255, 255, 255, 0.1)',
+        borderTop: '3px solid #3b82f6', // Bright blue accent
+        borderRadius: '50%',
+        animation: 'spin 1s linear infinite',
+        marginBottom: '20px'
+      }} />
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
+      <h1 style={{ fontSize: '1.5rem', fontWeight: '500', margin: '0 0 10px 0' }}>Redirecting to new portfolio</h1>
+      <p style={{ opacity: 0.6, fontSize: '0.9rem' }}>
+        If you are not redirected automatically, <a href="https://alanvaldez.xyz/" style={{ color: '#3b82f6', textDecoration: 'none' }}>click here</a>.
+      </p>
+    </div>
+  );
 }
 
-export default App
+export default App;
